@@ -8,8 +8,17 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+    .logo-caduceo {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500;
+      color: #4790cb;
+    }
+    </style>
+
   </head>
-  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <body class="bg-gray-200 flex items-center justify-center min-h-screen">
     <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
       <div class="flex items-center justify-center mb-6">
         <img
@@ -19,7 +28,7 @@
           src="https://cdn.discordapp.com/attachments/741090406527271004/1358365254177914900/ChatGPT_Image_Apr_5_2025_08_20_47_PM_1.png?ex=67f393b9&is=67f24239&hm=f243577d0a617a404414dca51d0057b6d23417bf1b7cce24f80458fd575a82bd&"
           width="50"
         />
-        <h1 class="text-2xl Open Sans">
+        <h1 class="text-2xl logo-caduceo">
           <font color="#4790cb">CADUCEO</font>
         </h1>
       </div>
@@ -67,6 +76,9 @@
                     $hashed_password = $row['password'];
             
                     if (password_verify($password, $hashed_password)) {
+
+                      header("Location: Dashboard.php");
+                      exit();
                     } else {
                       $error_password = "Password Error";
                     }
@@ -85,8 +97,8 @@
         <div class="mb-4">
           <?php if (!empty($error_email)): ?>
             <p class="text-red-600 text-sm mt-2">
-              L'indirizzo email inserito non è registrato. Verifica l'email e riprova oppure 
-              <a href="SignUp.php" class="text-red-600 underline">Registrati.</a>.
+            The email address entered is not registered. Verify your email and try again or 
+              <a href="SignUp.php" class="text-red-600 underline">Sign up.</a>.
             </p>
           <?php endif; ?>
           <label class="block text-gray-700" for="email">Email</label>
@@ -109,7 +121,7 @@
           />
           <?php if (!empty($error_password)): ?>
             <p class="text-red-600 text-sm mt-2">
-              Password errata. Riprova o fai clic su <a href="#" class="underline">Password dimenticata</a> per reimpostarla.
+              Incorrect password. Please try again or click <a href="#" class="underline">Forgot Password</a> to reset it.
             </p>
           <?php endif; ?>
         </div>

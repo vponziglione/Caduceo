@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <body class="bg-gray-200 flex items-center justify-center min-h-screen">
     <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
       <div class="flex items-center justify-center mb-6">
         <img
