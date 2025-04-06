@@ -28,7 +28,7 @@ Caduceo mira a creare un **ecosistema interoperabile** che consenta:
 Per maggiori informazioni, non esitare a contattarci:
 
 - **Email**: support@caduceo.it
-- 
+  
 - **Sito ufficiale**: www.caduceo.it
 
 🎯 Missione
