@@ -12,7 +12,7 @@
     <style>
     .logo-caduceo {
       font-family: 'Raleway', sans-serif;
-      font-weight: 500;
+      font-weight: 600;
       color: #4790cb;
     }
     </style>
@@ -20,14 +20,16 @@
   </head>
   <body class="bg-gray-200 flex items-center justify-center min-h-screen">
     <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
-      <div class="flex items-center justify-center mb-6">
+      <div class="flex items-center justify-center mb-1">
         <img
-          alt="Caduceus symbol"
-          class="mr-2"
-          height="50"
-          src="https://cdn.discordapp.com/attachments/741090406527271004/1358365254177914900/ChatGPT_Image_Apr_5_2025_08_20_47_PM_1.png?ex=67f393b9&is=67f24239&hm=f243577d0a617a404414dca51d0057b6d23417bf1b7cce24f80458fd575a82bd&"
-          width="50"
-        />
+            alt="Caduceus symbol"
+            class="mr-2"
+            height="50"
+            src="https://cdn.discordapp.com/attachments/741090406527271004/1358365254177914900/ChatGPT_Image_Apr_5_2025_08_20_47_PM_1.png?ex=67f393b9&is=67f24239&hm=f243577d0a617a404414dca51d0057b6d23417bf1b7cce24f80458fd575a82bd&"
+            width="50"
+          />
+      </div>
+      <div class="flex items-center justify-center mb-6">
         <h1 class="text-2xl logo-caduceo">
           <font color="#4790cb">CADUCEO</font>
         </h1>
@@ -47,7 +49,7 @@
             $servername = "localhost";
             $username = "root"; // Utente di default di XAMPP
             $password = "";     // Password vuota di default in XAMPP
-            $dbname = "pazienti_db";
+            $dbname = "dottore_db";
 
             $conn = new mysqli($servername, $username, $password, $dbname);
 
