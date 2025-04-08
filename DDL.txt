@@ -1,0 +1,16 @@
+-- Crea il database pazienti_db
+CREATE DATABASE IF NOT EXISTS dottore_db;
+
+-- Seleziona il database creato
+USE dottore_db;
+
+-- Crea la tabella users
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,        -- Identificatore univoco
+    email VARCHAR(255) NOT NULL UNIQUE,       -- Indirizzo email (unico e obbligatorio)
+    name VARCHAR(100) NOT NULL,               -- Nome (obbligatorio)
+    surname VARCHAR(100) NOT NULL,            -- Cognome (obbligatorio)
+    password VARCHAR(255) NOT NULL,           -- Password crittografata (obbligatoria)
+    phone_number CHAR(10),                    -- Numero di telefono (opzionale, max 10 cifre)
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Timestamp di registrazione
+);
