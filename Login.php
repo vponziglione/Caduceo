@@ -9,13 +9,7 @@
       rel="stylesheet"
     />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-    .logo-caduceo {
-      font-family: 'Raleway', sans-serif;
-      font-weight: 600;
-      color: #4790cb;
-    }
-    </style>
+    <link rel="stylesheet" href="style.css">
 
   </head>
   <body class="bg-gray-200 flex items-center justify-center min-h-screen">
@@ -95,52 +89,73 @@
             $conn->close();
             ?>
 
-      <form action="" method="POST">
-        <div class="mb-4">
-          <?php if (!empty($error_email)): ?>
-            <p class="text-red-600 text-sm mt-2">
-            The email address entered is not registered. Verify your email and try again or 
-              <a href="SignUp.php" class="text-red-600 underline">Sign up.</a>.
-            </p>
-          <?php endif; ?>
-          <label class="block text-gray-700" for="email">Email</label>
-          <input
-            class="w-full px-3 py-2 border rounded"
-            name="email"
-            required=""
-            type="email"
-            placeholder="Email"
-          />
-        </div>
-        <div class="mb-6">
-          <label class="block text-gray-700" for="password">Password</label>
-          <input
-            class="w-full px-3 py-2 border rounded"
-            name="password"
-            required=""
-            type="password"
-            placeholder="Password"
-          />
-          <?php if (!empty($error_password)): ?>
-            <p class="text-red-600 text-sm mt-2">
-              Incorrect password. Please try again or click <a href="#" class="underline">Forgot Password</a> to reset it.
-            </p>
-          <?php endif; ?>
-        </div>
-        <!-- Bottone per inoltrare i dati -->
-        <div class="col-span-2 flex justify-center">
-          <button
-            class="w-full bg-blue-600 text-white py-2 rounded"
-            type="submit"
-          >
-            Log in
-          </button>
-        </div>
-      </form>
-      <p class="mt-6 text-center text-gray-700">
-        Don't have an account?
-        <a class="text-blue-600" href="SignUp.php"> Sign up </a>
+<form action="" method="POST">
+  <div class="mb-4">
+    <?php if (!empty($error_email)): ?>
+      <p class="text-red-600 text-sm mt-2">
+      The email address entered is not registered. Verify your email and try again or 
+        <a href="SignUp.php" class="text-red-600 underline">Sign up.</a>.
       </p>
+    <?php endif; ?>
+    <label class="block text-gray-700" for="email">Email</label>
+    <input
+      class="w-full px-3 py-2 border rounded"
+      id="email"
+      name="email"
+      required
+      type="email"
+      placeholder="Email"
+    />
+  </div>
+  <div class="mb-6">
+    <label class="block text-gray-700" for="password">Password</label>
+    <div class="relative">
+      <input
+        class="w-full px-3 py-2 border rounded"
+        id="password"
+        name="password"
+        required
+        type="password"
+        placeholder="Password"
+      />
+      <?php if (!empty($error_password)): ?>
+        <p class="text-red-600 text-sm mt-2">
+          Incorrect password. Please try again or click <a href="#" class="underline">Forgot Password</a> to reset it.
+        </p>
+      <?php endif; ?>
+      <div class="mt-2">
+        <input type="checkbox" id="togglePassword" onclick="togglePasswordVisibility('password')">
+        <label for="togglePassword">Show password</label>
+      </div>
+    </div>
+  </div>
+  <div class="col-span-2 flex justify-center">
+    <button
+      class="w-full bg-blue-600 text-white py-2 rounded"
+      type="submit"
+    >
+      Log in
+    </button>
+  </div>
+</form>
+
+<p class="mt-6 text-center text-gray-700">
+  Don't have an account?
+  <a class="text-blue-600" href="SignUp.php">Sign up</a>
+</p>
+
+<script>
+  // Funzione per mostrare/nascondere la password
+  function togglePasswordVisibility(fieldId) {
+    const passwordField = document.getElementById(fieldId);
+    if (passwordField) {
+      // Cambia il tipo del campo tra 'password' e 'text'
+      passwordField.type = passwordField.type === 'password' ? 'text' : 'password';
+    }
+  }
+</script>
+
+
     </div>
 
     
