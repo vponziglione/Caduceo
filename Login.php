@@ -19,7 +19,7 @@
             alt="Caduceus symbol"
             class="mr-2"
             height="50"
-            src="https://cdn.discordapp.com/attachments/741090406527271004/1358365254177914900/ChatGPT_Image_Apr_5_2025_08_20_47_PM_1.png?ex=67f393b9&is=67f24239&hm=f243577d0a617a404414dca51d0057b6d23417bf1b7cce24f80458fd575a82bd&"
+            src="logo.png"
             width="50"
           />
       </div>
