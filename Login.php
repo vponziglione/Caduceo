@@ -73,8 +73,8 @@
             
                     if (password_verify($password, $hashed_password)) {
 
-                      header("Location: Dashboard.php");
-                      exit();
+                      //header("Location: Dashboard.php");
+                      //exit();
                     } else {
                       $error_password = "Password Error";
                     }
