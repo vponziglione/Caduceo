@@ -15,9 +15,27 @@ Caduceo mira a creare un **ecosistema interoperabile** che consenta:
 ---
 
 ## Funzionalità principali
-1. **Digitalizzazione dei processi sanitari** 🖥️
+1. **Digitalizzazione dei processi sanitari** 
    - Trasformare i dati cartacei in dati digitali per migliorare la gestione e l'accessibilità.
-2. **Interoperabilità** 🤝
+2. **Interoperabilità** 
    - Garantire la comunicazione tra sistemi diversi e la compatibilità tra strutture pubbliche e private.
-3. **Sicurezza e Tracciabilità** 🔐
+3. **Sicurezza e Tracciabilità** 
    - Protezione dei dati clinici con i più alti standard di sicurezza e audit continuo.
+   
+-- database pazienti_db
+
+CREATE DATABASE IF NOT EXISTS dottore_db;
+
+-- Seleziona il database creato
+USE dottore_db;
+
+-- tabella users
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,        -- Identificatore univoco
+    email VARCHAR(255) NOT NULL UNIQUE,       -- Indirizzo email (unico e obbligatorio)
+    name VARCHAR(100) NOT NULL,               -- Nome (obbligatorio)
+    surname VARCHAR(100) NOT NULL,            -- Cognome (obbligatorio)
+    password VARCHAR(255) NOT NULL,           -- Password crittografata (obbligatoria)
+    phone_number CHAR(10),                    -- Numero di telefono (opzionale, max 10 cifre)
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Timestamp di registrazione
+);
